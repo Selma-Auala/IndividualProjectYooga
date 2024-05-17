@@ -120,11 +120,12 @@
         $("#portfolio-filter li").removeClass('filter-active');
         $(this).addClass('filter-active');
         portfolioIsotope.isotope({filter: $(this).data('filter')});
-    });
-    
-    var formdata = new FormData();
-formdata.append("type", "Light Square");
-formdata.append("tags", "music,party");
+    });    
+
+})(jQuery);
+var formdata = new FormData();
+formdata.append("type", "Vertical Strip");
+formdata.append("tags", "yoga");
 
 var ajax = new XMLHttpRequest();
 ajax.addEventListener("load", completeHandler, false);
@@ -143,5 +144,3 @@ function completeHandler(event) {
     document.querySelector('.anchorElement').href = response.href;
     document.querySelector('.headerText').innerHTML = response.message;
 }
-})(jQuery);
-
